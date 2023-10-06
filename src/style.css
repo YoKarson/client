@@ -1,0 +1,105 @@
+/*whats the difference between height: 100vh and height 100%*/
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  background-color: lightgrey;
+}
+
+.expense-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.expense-data {
+  font-size: 16px;
+  color: black;
+  font-weight: normal;
+}
+
+.expenses {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 30px;
+}
+.top-section {
+  display: flex;
+  padding: 20px 100px;
+  height: 100px;
+  background-color: white;
+}
+
+.right-section {
+  width: 100%;
+}
+
+.left-side-bar {
+  height: 100vh;
+  width: 200px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: left;
+  background-color: #2f4050;
+}
+
+.side-bar-button {
+  margin: 10px;
+}
+
+.delete {
+  border: none;
+  padding: 3px 6px;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid rgb(242, 100, 100);
+  color: rgb(242, 100, 100);
+}
+
+.form-button {
+  border: none;
+  padding: 10px;
+  background-color: salmon;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.update {
+  border: none;
+  padding: 3px 6px;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid rgb(204, 204, 243);
+  color: rgb(204, 204, 243);
+}
+
+.logo {
+  margin: 10px;
+  padding: 0px 20px;
+  color: salmon;
+}
+
+.input {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid gray;
+}
+
+.addButton {
+  background-color: #2f4050;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightgrey;
+}
