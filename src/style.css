@@ -8,9 +8,17 @@
 
 .expense-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
+.around-right-and-body {
+  display: flex;
+  flex-direction: column;
+}
+.left-and-right-section {
+  display: flex;
+  flex-direction: row;
+}
 .expense-data {
   font-size: 16px;
   color: black;
@@ -30,27 +38,33 @@
 }
 .top-section {
   display: flex;
+  flex-direction: column;
   padding: 20px 100px;
   height: 100px;
+  width: 100vw;
   background-color: white;
 }
 
 .right-section {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
 .left-side-bar {
-  height: 100vh;
-  width: 200px;
+  height: 750px;
+  width: 300px;
   gap: 10px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
-  align-content: left;
+  align-items: center;
   background-color: #2f4050;
 }
 
 .side-bar-button {
-  margin: 10px;
+  margin: 15px;
+  width: 150px;
 }
 
 .delete {

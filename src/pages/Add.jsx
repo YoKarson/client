@@ -18,6 +18,7 @@ const Add = () => {
 
     try {
       await axios.post("http://localhost:8800/expenses", expense);
+      window.location.reload();
     } catch (err) {
       console.log(err);
     }

@@ -8,10 +8,13 @@ redux
 
 ---- What I need to add ----
 
-- fix side bar and make it more clean
-- Refresh boxes after adding expense
-- Add a new button called expenses
-- Expenses button will show all expenses entered.
+- fix side bar and make it more clean (Paritally Done)
+- Refresh boxes after adding expense (DONE) -> using window.location.reload()
+- Add a new button called expenses(DONE)
+- Expenses button will show all expenses entered.(DONE)
+
 - after entering an expense it should go back to home page or expense page.
 - change update page to not go to a seperate page.
 - add error checking for valid input.
+
+- setting up expenses to be positioned in the right places
