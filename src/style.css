@@ -28,6 +28,10 @@
 .expenses {
   display: flex;
   flex-direction: column;
+  width: 1000px;
+  border: 3px solid black;
+  padding: 1px;
+  overflow: auto;
 }
 
 .form {

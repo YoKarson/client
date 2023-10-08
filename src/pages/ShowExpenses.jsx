@@ -47,7 +47,7 @@ const ShowExpenses = () => {
       {expenses.map((expense) => (
         <div className="all-expense-data" key={expense.expenseId}>
           <div className="expense-data">
-            <h3>Expense: {expense.expenseName}</h3>
+            <h3>Transaction: {expense.expenseName}</h3>
             <h3>Amount: ${expense.expenseAmount}</h3>
             <h3>Date: {expense.expenseDate}</h3>
           </div>

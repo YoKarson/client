@@ -17,10 +17,10 @@ const Expenses = () => {
             <Link to="/">Dashboard</Link>
           </button>
           <button className="side-bar-button">
-            <Link to="/ShowExpenses">Expenses</Link>
+            <Link to="/ShowExpenses">Transactions</Link>
           </button>
           <button className="side-bar-button">
-            <Link to="/Add"> Add a new expense</Link>
+            <Link to="/Add"> Add a new transaction</Link>
           </button>
         </div>
         <div className="around-right-and-body">

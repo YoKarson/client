@@ -13,7 +13,13 @@ redux
 - Add a new button called expenses(DONE)
 - Expenses button will show all expenses entered.(DONE)
 
+- Add a way to track expense/income
+- Display a total balance
+- Display a total expense amount
+- Display an expense/income next to that item
+- Change color of an expense to red
+- Change color of an income to green
+
 - change update page to not go to a seperate page.
 - add error checking for valid input.
-
 - setting up expenses to be positioned in the right places
