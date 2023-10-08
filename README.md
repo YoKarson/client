@@ -13,7 +13,6 @@ redux
 - Add a new button called expenses(DONE)
 - Expenses button will show all expenses entered.(DONE)
 
-- after entering an expense it should go back to home page or expense page.
 - change update page to not go to a seperate page.
 - add error checking for valid input.
 
