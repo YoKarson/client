@@ -29,23 +29,30 @@ const Add = () => {
       <div className="form">
         <input
           type="text"
-          placeholder="Name of the expense"
+          placeholder="Transaction Name"
           onChange={handleChange}
           name="expenseName"
         />
 
         <input
           type="number"
-          placeholder="Amount of the expense"
+          placeholder="Transaction Amount"
           onChange={handleChange}
           name="expenseAmount"
         />
 
         <input
           type="text"
-          placeholder="Date of the expense"
+          placeholder="Transaction Date"
           onChange={handleChange}
           name="expenseDate"
+        />
+
+        <input
+          type="text"
+          placeholder="Type of Transaction"
+          onChange={handleChange}
+          name="expenseType"
         />
 
         <button className="form-button" onClick={handleClick}>

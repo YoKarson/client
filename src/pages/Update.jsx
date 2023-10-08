@@ -9,6 +9,7 @@ const Update = () => {
     expenseName: "",
     expenseAmount: "",
     expenseDate: "",
+    expenseType: "",
   });
 
   const location = useLocation();
@@ -51,6 +52,13 @@ const Update = () => {
           placeholder="Date of the expense"
           onChange={handleChange}
           name="expenseDate"
+        />
+
+        <input
+          type="text"
+          placeholder="Type of Transaction"
+          onChange={handleChange}
+          name="expenseType"
         />
 
         <button className="form-button" onClick={handleClick}>

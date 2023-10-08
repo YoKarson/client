@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const ShowExpenses = () => {
   const [expenses, setExpenses] = useState([]);
   const [totalExpense, setTotalExpense] = useState([]);
+  const [totalIncome, setTotalIncome] = useState([]);
 
   useEffect(() => {
     const fetchAllExpenses = async () => {
@@ -23,13 +24,29 @@ const ShowExpenses = () => {
   useEffect(() => {
     const fetchTotalExpense = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/totalExpense");
+        const res = await axios.get("http://localhost:8800/totalExpense", {
+          params: { expenseType: "expense" },
+        });
         setTotalExpense(parseFloat(res.data));
       } catch (err) {
         console.log(err);
       }
     };
     fetchTotalExpense();
+  });
+
+  useEffect(() => {
+    const fetchTotalIncome = async () => {
+      try {
+        const res = await axios.get("http://localhost:8800/totalIncome", {
+          params: { expenseType: "income" },
+        });
+        setTotalIncome(parseFloat(res.data));
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchTotalIncome();
   });
 
   const handleDelete = async (expenseId) => {
@@ -43,13 +60,26 @@ const ShowExpenses = () => {
 
   return (
     <div className="expenses">
-      <h2>Total Expenses: $ {totalExpense}</h2>
+      <h2>Total Balance: ${totalIncome - totalExpense}</h2>
+      <div className="expense-income">
+        <h3>Total Expenses: $ {totalExpense}</h3>
+        <h3>Total Income: $ {totalIncome}</h3>
+      </div>
       {expenses.map((expense) => (
         <div className="all-expense-data" key={expense.expenseId}>
           <div className="expense-data">
-            <h3>Transaction: {expense.expenseName}</h3>
-            <h3>Amount: ${expense.expenseAmount}</h3>
-            <h3>Date: {expense.expenseDate}</h3>
+            <ul>
+              <li>{expense.expenseName}</li>
+              <li>${expense.expenseAmount}</li>
+              <li>{expense.expenseDate}</li>
+              <li
+                style={{
+                  color: expense.expenseType === "expense" ? "red" : "green",
+                }}
+              >
+                {expense.expenseType}
+              </li>
+            </ul>
           </div>
           <button
             className="delete"
