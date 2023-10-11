@@ -60,38 +60,45 @@ const ShowExpenses = () => {
 
   return (
     <div className="expenses">
-      <h2>Total Balance: ${totalIncome - totalExpense}</h2>
+      <div className="total-balance">
+        <h2>Total Balance: ${totalIncome - totalExpense}</h2>
+      </div>
       <div className="expense-income">
         <h3>Total Expenses: $ {totalExpense}</h3>
         <h3>Total Income: $ {totalIncome}</h3>
       </div>
-      {expenses.map((expense) => (
-        <div className="all-expense-data" key={expense.expenseId}>
-          <div className="expense-data">
-            <ul>
-              <li>{expense.expenseName}</li>
-              <li>${expense.expenseAmount}</li>
-              <li>{expense.expenseDate}</li>
-              <li
-                style={{
-                  color: expense.expenseType === "expense" ? "red" : "green",
-                }}
-              >
-                {expense.expenseType}
-              </li>
-            </ul>
+      <div className="expense-data-container">
+        {expenses.map((expense) => (
+          <div className="all-expense-data" key={expense.expenseId}>
+            <div className="expense-data">
+              <ul>
+                <li>{expense.expenseName}</li>
+                <li>${expense.expenseAmount}</li>
+                <li>
+                  {expense.expenseMonth}/{expense.expenseDay}/
+                  {expense.expenseYear}
+                </li>
+                <li
+                  style={{
+                    color: expense.expenseType === "expense" ? "red" : "green",
+                  }}
+                >
+                  {expense.expenseType}
+                </li>
+              </ul>
+            </div>
+            <button
+              className="delete"
+              onClick={() => handleDelete(expense.expenseId)}
+            >
+              Delete
+            </button>
+            <button className="update">
+              <Link to={`/Update/${expense.expenseId}`}>Update</Link>
+            </button>
           </div>
-          <button
-            className="delete"
-            onClick={() => handleDelete(expense.expenseId)}
-          >
-            Delete
-          </button>
-          <button className="update">
-            <Link to={`/Update/${expense.expenseId}`}>Update</Link>
-          </button>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

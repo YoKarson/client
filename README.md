@@ -20,6 +20,8 @@ redux
 - Change color of an expense to red(DONE)
 - Change color of an income to green(DONE)
 
+- Create seperate inputs for month/day/year
+
 - change update page to not go to a seperate page.
 - add error checking for valid input.
 - setting up expenses to be positioned in the right places

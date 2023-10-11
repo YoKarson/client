@@ -37,6 +37,9 @@ const Expenses = () => {
             </div>
           </div>
         </div>
+        <div className="right-side-bar">
+          <button className="right-side-bar-button">Sort by month</button>
+        </div>
       </div>
     </div>
   );

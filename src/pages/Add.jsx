@@ -6,7 +6,10 @@ const Add = () => {
   const [expense, setExpense] = useState({
     expenseName: "",
     expenseAmount: "",
-    expenseDate: "",
+    expenseMonth: "",
+    expenseDay: "",
+    expenseYear: "",
+    expenseType: "",
   });
 
   const handleChange = (e) => {
@@ -43,11 +46,22 @@ const Add = () => {
 
         <input
           type="text"
-          placeholder="Transaction Date"
+          placeholder="Transaction Month"
           onChange={handleChange}
-          name="expenseDate"
+          name="expenseMonth"
         />
-
+        <input
+          type="text"
+          placeholder="Transaction Day"
+          onChange={handleChange}
+          name="expenseDay"
+        />
+        <input
+          type="text"
+          placeholder="Transaction Year"
+          onChange={handleChange}
+          name="expenseYear"
+        />
         <input
           type="text"
           placeholder="Type of Transaction"
